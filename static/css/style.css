@@ -1,0 +1,327 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-size: 16px;
+	color: #666;
+
+}
+ul{
+	list-style: none;
+}
+img {
+	width: 100%;
+}
+.navbar {
+	opacity: 0.8;
+
+}
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+  	color: #666;
+	background: #fff;
+ }
+
+.navbar-header a {
+    display: inline-block;
+    width: 15rem;
+    height: 4rem;
+    margin-top: -5px;
+}
+
+#figure {
+	/*padding-top: 4.2rem;*/
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+}
+.row {
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+#figure figure {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+#figure .row figure {
+	position: relative;
+	opacity: 1;
+	top: 50px;
+}
+#figure figure figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 15%;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0);
+	transition: background 0.3s;
+}
+#figure figure:hover figcaption {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#figure figure figcaption h3 {
+	position: relative;
+	transform: translate(0,100%);
+	transition: transform 0.3s;
+}
+#figure figure:hover h3 {
+	transform: translate(0,-100%);
+}
+#figure figure figcaption p {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 1.5rem;
+	padding: 25% 10%;
+	line-height: 2rem;
+	letter-spacing: 1px;
+	border: 2px solid #fff;
+	transform: scale(0);
+	opacity: 0;
+	transition: all 0.3s;
+}
+#figure figure:hover p {
+	opacity: 1;
+	transform: scale(0.7);
+}
+
+/*about*/
+#about {
+	padding-top: 8rem;
+}
+#about #about_content h2 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+}
+#about #about_content #about_content_row h4 {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+#about #about_content #about_content_row p {
+    
+    line-height: 1.7rem;
+    
+}
+#about #about_content #about_content_row {
+    overflow: hidden;
+}
+/*Process*/
+#about_content .Process {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+#about_content .Process h2 {
+    margin-bottom: 2.7rem;
+    text-align: center;
+}
+#about_content .Process ul {
+    padding-left: 7rem;
+    width: 60%;
+    margin: 0 auto;
+}
+#about_content .Process ul li {
+	width: 10rem;
+	height: 10rem;
+	margin-right: 1rem;
+	display: inline-block;;
+	text-align: center;
+	border: 1px solid #c4e3f3;
+	border-radius: 50%;
+	color: #2aabd2;
+}
+#about_content .Process ul li div {
+	padding: 2rem 0;
+}
+#about_content .Process ul li div i {
+	font-size: 4rem;
+}
+
+/*中间图片*/
+#about #info {
+    background: url("../../images/lab.jpg") no-repeat center fixed;
+    background-size: cover;
+    text-align: center;
+}
+#about #info .info_z {
+    background: rgba(33, 171, 202, 0.3);
+}
+#about #info .info_z .container {
+    width: 80%;
+    padding: 10rem 0;
+    color: #fff;
+}
+#about #info .container .row {
+    overflow: hidden;
+}
+
+/*合作伙伴*/
+#partners {
+    padding-top: 4rem;
+    padding-bottom: 50px;
+}
+#partners h2 {
+	text-align: center;
+}
+#partners .partners_container {
+    padding: 2rem;
+}
+#partners .partners_container .row_1 .row img {
+    margin-bottom: 20px;
+}
+#partners .carousel-indicators li {
+	border: 1px solid #6a5acd;
+}
+#partners .carousel-indicators {
+	bottom: -60px;
+}
+#partners .item img{
+	border-radius: 50%;
+}
+#partners .team h3 {
+	text-align: center;
+	margin: 4rem 0;
+	font-size: 3rem;
+}
+#partners .team p {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+#partners .team figure {
+	background: #e1e6e6;
+	position: relative;
+	overflow: hidden;
+}
+#partners .team figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: scale(1);
+	background: rgba(0,0,0,0.5);
+	opacity: 0;
+	transition: transform 0.3s;
+	color: #fff;
+
+}
+#partners .team figure:hover figcaption {
+	transform: scale(0.8);
+	opacity: 1;
+}
+#partners .team figure img {
+	transform: scale(1.2);
+}
+#partners .team figure:hover img{
+	transform: scale(1);
+	transition: transform 0.3s;
+}
+#partners .team figure figcaption p{
+	padding-top: 5rem;
+	font-size: 2rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 3rem;
+	transform: scale(1.5);
+	transition: transform 0.3s;
+}
+#partners .team figure:hover figcaption p{
+	transform: scale(1);
+}
+
+/*contact*/
+#contact {
+	padding-top: 4rem;
+	background: #f6f6f6;
+}
+#contact h2 {
+	text-align: center;
+}
+#contact .container {
+	overflow: hidden;
+}
+#contact input {
+	width: 100%;
+	margin-bottom: 1rem;
+	padding: 1rem;
+}
+#contact textarea {
+	width: 100%;
+	margin-bottom: 1rem;
+	padding: 1rem;
+}
+#contact button {
+	line-height: 1rem;
+	margin-bottom: 1rem;
+	width: 100%;
+	padding: 1.5rem;
+	background: #00a9c6;
+	border: none;
+	color: #fff;
+}
+#contact button:hover {
+	background: #1bc0dc;
+}
+
+#contact .footer {
+	background: #000;
+	text-align: center;
+	color: #fff;
+	padding: 5rem 0;
+	font-size: 1.5rem;
+	margin-top: 5rem;
+}
+#contact .footer p a {
+	padding: 1rem;
+	display: inline-block;
+}
+
+/*toTop*/
+#toTop {
+	position: fixed;
+	right: 4rem;
+	bottom: 4rem;
+	color: #fff;
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer;
+	color: #337ab7;
+	display: none;
+}
+html {
+    font-size: 12px;
+}
+
+@media (max-width: 960px) {
+    html {
+        font-size: 10px;
+    }
+
+    #contact .footer {
+        padding: 3rem;
+    }
+
+}
+
+@media (max-width: 750px) {
+    html {
+        font-size: 8px;
+    }
+
+    #contact .footer {
+        padding: 2rem;
+    }
+}
+
+

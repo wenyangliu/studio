@@ -48,11 +48,26 @@ img {
     overflow: hidden;
     padding: 0;
 }
-#figure .row figure {
+/*#figure .row figure {
 	position: relative;
 	opacity: 1;
 	top: 50px;
 }
+@keyframes img_dh {
+	0% {
+		opacity: 0;
+		top: 50px;
+	}
+	100% {
+		opacity: 1;
+		top: 0;
+	}
+}
+.dh_img {
+	animation: img_dh 0.5s;
+	animation-fill-mode: forwards;
+}*/
+
 #figure figure figcaption {
 	position: absolute;
 	top: 0;
@@ -100,7 +115,7 @@ img {
 }
 #about #about_content h2 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 2.5rem;
 }
 #about #about_content #about_content_row h4 {
@@ -116,19 +131,62 @@ img {
 #about #about_content #about_content_row {
     overflow: hidden;
 }
+/*动画部分*/
+#about #about_content #about_content_row .left {
+	position: relative;
+	opacity: 1;
+	left: -100%;
+}
+#about #about_content #about_content_row .right {
+	position: relative;
+	opacity: 1;
+	left: 100%;
+}
+@keyframes l_dh {
+	0% {
+		opacity: 0;
+		left: -100%;
+	}
+	100% {
+		opacity: 1;
+		left: 0;
+	}
+}
+
+.dh_l {
+	animation: l_dh 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes r_dh {
+	0% {
+		opacity: 0;
+		left: 100%;
+	}
+	100% {
+		opacity: 1;
+		left: 0;
+	}
+}
+
+.dh_r {
+	animation: r_dh 0.5s;
+	animation-fill-mode: forwards;
+}
+
+
 /*Process*/
 #about_content .Process {
     padding-top: 2rem;
     padding-bottom: 5rem;
 }
-#about_content .Process h2 {
+#about_content .Process h3 {
     margin-bottom: 2.7rem;
     text-align: center;
 }
 #about_content .Process ul {
     padding-left: 7rem;
-    width: 60%;
-    margin: 0 auto;
+    text-align: center;
 }
 #about_content .Process ul li {
 	width: 10rem;
@@ -139,6 +197,10 @@ img {
 	border: 1px solid #c4e3f3;
 	border-radius: 50%;
 	color: #2aabd2;
+	position: relative;
+	opacity: 0;
+	transform: rotate3d(1, 1, 1, 45deg) scale(0);
+	transform-origin: left bottom;
 }
 #about_content .Process ul li div {
 	padding: 2rem 0;
@@ -164,6 +226,27 @@ img {
 #about #info .container .row {
     overflow: hidden;
 }
+#about #info .container .row div {
+	position: relative;
+	opacity: 0;
+	transform: rotate3d(1, 1, 1, 45deg) scale(0);
+	transform-origin: center bottom;
+}
+
+@keyframes tb_dh {
+	0% {
+		opacity: 0;
+		transform: rotate3d(1, 1, 1, 45deg) scale(0); 
+	}
+	100% {
+		opacity: 1;
+		transform: rotate3d(1, 1, 1, 0deg) scale(1);
+	}
+}
+.dh_tb {
+	animation: tb_dh 0.5s;
+	animation-fill-mode: forwards;
+}
 
 /*合作伙伴*/
 #partners {
@@ -176,6 +259,27 @@ img {
 #partners .partners_container {
     padding: 2rem;
 }
+#partners .partners_container .row_1 {
+	position: relative;
+	opacity: 1;
+	left: -100%;
+}
+#partners .partners_container .row_2 {
+	position: relative;
+	opacity: 1;
+	left: 100%;
+}
+
+.dh_row_1 {
+	animation: l_dh 0.5s;
+	animation-fill-mode: forwards;
+}
+.dh_row_2 {
+	animation: r_dh 0.5s;
+	animation-fill-mode: forwards;
+}
+
+
 #partners .partners_container .row_1 .row img {
     margin-bottom: 20px;
 }
@@ -251,6 +355,25 @@ img {
 #contact .container {
 	overflow: hidden;
 }
+#contact .container .row {
+	position: relative;
+	opacity: 0;
+	left: 100%;
+}
+@keyframes form_dh {
+	0% {
+		opacity: 0;
+		left: 100%;
+	}
+	100% {
+		opacity: 1;
+		left: 0;
+	}
+}
+.dh_form {
+	animation: form_dh 0.5s;
+	animation-fill-mode: forwards;
+}
 #contact input {
 	width: 100%;
 	margin-bottom: 1rem;
@@ -299,6 +422,27 @@ img {
 	color: #337ab7;
 	display: none;
 }
+/*h2动画*/
+h2 {
+	position: relative;
+	opacity: 0;
+	transform: scale(0);
+}
+@keyframes h2_dh {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+.dh_h2 {
+	animation: h2_dh 0.5s;
+	animation-fill-mode: forwards;
+}
+
 html {
     font-size: 12px;
 }
